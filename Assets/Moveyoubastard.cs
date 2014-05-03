@@ -13,7 +13,7 @@ public class Moveyoubastard : MonoBehaviour {
 		if (Input.GetButton ("Fire1")) {
 			pos.Translate(0,0,-0.1f);
 		}
-		pos.RotateAround(pos.TransformPoint(Vector3.zero),Vector3.up,Input.GetAxis("Horizontal"));
-		pos.RotateAround(pos.TransformPoint(Vector3.zero),Vector3.forward,Input.GetAxis("Vertical"));
+		pos.RotateAround(pos.TransformPoint(Vector3.zero),pos.TransformDirection(Vector3.up),Input.GetAxis("Horizontal"));
+		pos.RotateAround(pos.TransformPoint(Vector3.zero),pos.TransformDirection(Vector3.right),Input.GetAxis("Vertical"));
 	}
 }

@@ -10,6 +10,7 @@ public class waterMusicScript : MonoBehaviour {
 	public AudioClip BlueDanube;
 	public AudioClip underwaterSound;
 	public AudioClip blowholeSound;
+	public GameObject plane;
 	bool underwaterFlag;
 	bool blowholeFlag = true;
 	// Use this for initialization
@@ -38,10 +39,12 @@ public class waterMusicScript : MonoBehaviour {
 			musicSource.volume = 0.2f;
 			underwaterSource.Play ();
 			underwaterFlag = true;
+			plane.SetActive (true);
 		} else if ((this.transform.position.y >= 10) && underwaterFlag) {
 			musicSource.volume = 1f;
 			underwaterSource.Stop ();
 			underwaterFlag = false;
+			plane.SetActive (false);
 		}
 	}
 }

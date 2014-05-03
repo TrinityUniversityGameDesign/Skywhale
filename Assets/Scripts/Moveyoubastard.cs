@@ -6,7 +6,9 @@ public class Moveyoubastard : MonoBehaviour {
 	public float speed;
 	// Use this for initialization
 	void Start () {
+		FadeIn.LoadLevel(1 ,0,5,Color.black);
 		pos = this.gameObject.transform;
+
 	}
 	
 	// Update is called once per frame

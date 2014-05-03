@@ -20,7 +20,7 @@ public class Blow : MonoBehaviour {
 			hole.emit = true;
 				}
 		else {
-			hole.ClearParticles();
+		//	hole.ClearParticles();
 			hole.emit = false;
 		}
 

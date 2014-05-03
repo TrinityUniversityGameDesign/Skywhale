@@ -11,7 +11,6 @@ public class waterMusicScript : MonoBehaviour {
 	public AudioClip underwaterSound;
 	public AudioClip blowholeSound;
 	bool underwaterFlag;
-	bool blowholeFlag = true;
 	// Use this for initialization
 	void Start () {
 		if (this.transform.position.y >= 10) {

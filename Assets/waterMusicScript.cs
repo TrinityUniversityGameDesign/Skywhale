@@ -11,7 +11,7 @@ public class waterMusicScript : MonoBehaviour {
 	bool underwaterFlag;
 	// Use this for initialization
 	void Start () {
-		if (this.transform.position.y >= 1) {
+		if (this.transform.position.y >= 10) {
 			underwaterFlag = false;
 		} else {
 			underwaterFlag = true;
@@ -27,11 +27,11 @@ public class waterMusicScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if ((this.transform.position.y < 1) && !underwaterFlag) {
+		if ((this.transform.position.y < 10) && !underwaterFlag) {
 			musicSource.volume = 0.2f;
 			underwaterSource.Play ();
 			underwaterFlag = true;
-		} else if ((this.transform.position.y >= 1) && underwaterFlag) {
+		} else if ((this.transform.position.y >= 10) && underwaterFlag) {
 			musicSource.volume = 1f;
 			underwaterSource.Stop ();
 			underwaterFlag = false;

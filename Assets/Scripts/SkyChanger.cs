@@ -12,7 +12,7 @@ public class SkyChanger : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(this.gameObject.transform.position.y > whale.transform.position.y){
+		if(this.gameObject.transform.position.y > Camera.main.transform.position.y){
 			RenderSettings.skybox = water;
 		}
 		else{

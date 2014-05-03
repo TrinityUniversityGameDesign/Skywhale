@@ -11,7 +11,7 @@ public class Moveyoubastard : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		if (Input.GetButton ("Fire1")) {
-			pos.Translate(0,0,-0.1f);
+			pos.Translate(0,0,-1.0f);
 		}
 		pos.RotateAround(pos.TransformPoint(Vector3.zero),pos.TransformDirection(Vector3.up),Input.GetAxis("Horizontal"));
 		pos.RotateAround(pos.TransformPoint(Vector3.zero),pos.TransformDirection(Vector3.right),Input.GetAxis("Vertical"));

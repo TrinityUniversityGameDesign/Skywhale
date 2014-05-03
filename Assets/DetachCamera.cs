@@ -21,15 +21,12 @@ public class DetachCamera : MonoBehaviour {
 		} else {
 			if (pos.parent == null) {
 				pos.parent = whale;
-				print ("boop");
 			}
 			if (pos.localPosition != origPos) {
 				pos.localPosition = Vector3.Lerp (pos.localPosition, origPos, 0.05f);
-				print ("boop2");
 			}
 			if (pos.localRotation != origRot) {
 				pos.localRotation = Quaternion.Lerp (pos.localRotation, origRot, 0.05f);
-				print ("boop3");
 			}
 		}
 	}

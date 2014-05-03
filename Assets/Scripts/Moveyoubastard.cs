@@ -15,5 +15,6 @@ public class Moveyoubastard : MonoBehaviour {
 		}
 		pos.RotateAround(pos.TransformPoint(Vector3.zero),pos.TransformDirection(Vector3.up),Input.GetAxis("Horizontal"));
 		pos.RotateAround(pos.TransformPoint(Vector3.zero),pos.TransformDirection(Vector3.right),Input.GetAxis("Vertical"));
+		pos.RotateAround(pos.TransformPoint(Vector3.zero),pos.TransformDirection(Vector3.forward),Input.GetAxis("Roll"));
 	}
 }

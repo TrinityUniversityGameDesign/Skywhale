@@ -3,12 +3,14 @@ using System.Collections;
 
 public class Blow : MonoBehaviour {
 	private ParticleEmitter hole;
-
+	public AudioClip blowholeSound;
+	bool blowFlag = true;
 
 	// Use this for initialization
 	void Start () {
 		hole = this.particleEmitter;
 		hole.emit = false;
+		audio.clip = blowholeSound;
 	}
 
 
@@ -16,12 +18,14 @@ public class Blow : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetButton ("Blowhole")) {
+		if (Input.GetButtonDown ("Blowhole") && blowFlag) {
 			hole.emit = true;
-				}
-		else {
-			hole.ClearParticles();
+			audio.Play();
+		}
+		if (!audio.isPlaying) {
+		//	hole.ClearParticles();
 			hole.emit = false;
+			audio.Stop ();
 		}
 
 	}

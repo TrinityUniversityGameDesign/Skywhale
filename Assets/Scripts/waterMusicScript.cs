@@ -6,9 +6,11 @@ public class waterMusicScript : MonoBehaviour {
 	AudioSource[] sounds;
 	AudioSource musicSource;
 	AudioSource underwaterSource;
+	AudioSource waveSource;
 	public AudioClip BlueDanube;
 	public AudioClip underwaterSound;
-	public AudioClip blowholeSound;
+	public AudioClip waves;
+
 	public GameObject plane;
 	public Transform water;
 	bool underwaterFlag;
@@ -26,6 +28,9 @@ public class waterMusicScript : MonoBehaviour {
 		musicSource.Play ();
 		underwaterSource = sounds [1];
 		underwaterSource.clip = underwaterSound;
+		waveSource = sounds [2];
+		waveSource.clip = waves;
+		waveSource.Play ();
 	}
 	
 	// Update is called once per frame
@@ -41,6 +46,11 @@ public class waterMusicScript : MonoBehaviour {
 			underwaterSource.Stop ();
 			underwaterFlag = false;
 			plane.SetActive (false);
+		}
+		if ((this.transform.position.y > 15) && !waveSource.mute){
+			waveSource.mute = true;
+		} else if (this.transform.position.y <= 15 && waveSource.mute) {
+			waveSource.mute = false;
 		}
 	}
 }

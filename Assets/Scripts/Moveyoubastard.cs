@@ -13,14 +13,14 @@ public class Moveyoubastard : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		if (Input.GetButton ("Fire1")) {
+		if (Input.GetButton ("Move")) {
 			pos.Translate(0,0,-speed);
 		}
 		pos.RotateAround(pos.TransformPoint(Vector3.zero),pos.TransformDirection(Vector3.up),Input.GetAxis("Horizontal"));
 		pos.RotateAround(pos.TransformPoint(Vector3.zero),pos.TransformDirection(Vector3.right),Input.GetAxis("Vertical"));
 		pos.RotateAround(pos.TransformPoint(Vector3.zero),pos.TransformDirection(Vector3.forward),Input.GetAxis("Roll"));
 
-		if (Input.GetButtonDown ("Fire3")) {
+		/*if (Input.GetButtonDown ("Fire3")) {
 			this.gameObject.rigidbody.drag = .001f;
 			this.gameObject.rigidbody.angularDrag = .001f;
 			this.gameObject.rigidbody.useGravity = true;
@@ -31,7 +31,7 @@ public class Moveyoubastard : MonoBehaviour {
 			this.gameObject.rigidbody.angularDrag = 100f;
 			this.gameObject.rigidbody.useGravity = false;
 			this.gameObject.rigidbody.mass = 1f;
-		}
+		}*/
 	}
 }
 

@@ -31,3 +31,22 @@ ExportedObj/
 Icon?
 ehthumbs.db
 Thumbs.db
+*.dll
+Skywhales_Data/Mono/etc/mono/1.0/DefaultWsdlHelpGenerator.aspx
+Skywhales_Data/mainData
+Skywhales_Data/output_log.txt
+Skywhales_Data/resources.assets
+Skywhales_Data/sharedassets0.assets
+Skywhales_Data/Resources/unity default resources
+Skywhales_Data/Mono/etc/mono/1.0/machine.config
+Skywhales_Data/Mono/etc/mono/2.0/Browsers/Compat.browser
+Skywhales_Data/Mono/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx
+Skywhales_Data/Mono/etc/mono/2.0/machine.config
+Skywhales_Data/Mono/etc/mono/2.0/settings.map
+Skywhales_Data/Mono/etc/mono/2.0/web.config
+Skywhales_Data/Mono/etc/mono/browscap.ini
+Skywhales.exe
+Skywhales_Data/Mono/etc/mono/config
+Skywhales_Data/Mono/etc/mono/mconfig/config.xml
+Skywhales_Data/PlayerConnectionConfigFile
+Skywhales_Data/Resources/unity_builtin_extra
